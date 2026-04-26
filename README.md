@@ -18,4 +18,6 @@
 
 # ⚙ Getting Started
 
-- ## Just download this repo's zip, extract it to a folder and run ``installDependencies.bat``, it'll install ``pyinstaller`` and then turn ``main.py`` into an executable file.
+- ## Just download this repo's zip, extract it to a folder and run ``pip install .`` in the root folder, which should look something like this:
+
+<img width="677" height="204" alt="Screenshot 2026-04-26 143630" src="https://github.com/user-attachments/assets/e1bcfb2f-6fa0-49e1-80df-7d16490696b9" />
