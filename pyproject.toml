@@ -1,0 +1,6 @@
+[project]
+name = "blockpy"
+version = "0.1.0"
+
+[project.scripts]
+blockpy = "blockpy.main:main"

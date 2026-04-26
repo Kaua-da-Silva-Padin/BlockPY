@@ -19,7 +19,7 @@ def fetch_sample(endpoint: str, params):
     ).json()
     return res
 
-def main() -> None:
+def create() -> None:
     light_themes = ['cosmo', 'flatly', 'journal', 'litera', 'lumen', 'minty', 'pulse', 'sandstone', 'united', 'yeti', 'morph', 'simplex', 'cerculean']
     
     dark_themes = ['solar', 'superhero', 'darkly', 'cyborg', 'vapor']
@@ -28,6 +28,7 @@ def main() -> None:
     
     try:
         print(Panel('[bold green]Ttkbootstrap Project Creator[/bold green]', expand=False))
+        
         project_name = Prompt.ask(
             'Project Name',
             default='Sample Project'
@@ -104,9 +105,18 @@ def main() -> None:
                 
                 print(Panel(f'[bold italic green]Your "{project_name}" project[/bold italic green] was [bold red]overwritten![/bold red]\n[bold italic green]Creating new one...[/bold italic green]', expand=False))
                 
-                main()
+                create()
                 
     except Exception as e:
         print(Panel(f'[bold red]Something went wrong!\n{e}[/bold red]', expand=False))
         os.system('pause')
-main()
+
+def main():
+    opt = Prompt.ask(
+        'Options',
+        choices=['create app'],
+        case_sensitive=False
+    )
+    match opt:
+        case 'create app':
+            create()
