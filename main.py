@@ -31,7 +31,7 @@ def main() -> None:
         project_name = Prompt.ask(
             'Project Name',
             default='Sample Project'
-        )
+        ).strip().replace(' ', '-')
         
         file_path = f'{project_name}/main.py'
         
